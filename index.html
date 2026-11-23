@@ -19,6 +19,13 @@
   .btn { background: #FFD23F; color: var(--ink); font-weight: 700; padding: 10px 22px; border-radius: 18px; text-decoration: none; box-shadow: 0 4px 0 #D49A00; }
   .btn.green { background: #3DDC84; color: #fff; box-shadow: 0 4px 0 #24A862; }
   footer { color: var(--muted); font-size: .9rem; margin-top: 28px; }
+  /* Screenshot gallery: swipe sideways on phones, scroll on desktop */
+  .shots { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 4px 18px; margin: 8px -18px 0; padding-left: 18px; padding-right: 18px; -webkit-overflow-scrolling: touch; }
+  .shots figure { flex: 0 0 212px; width: 212px; margin: 0; scroll-snap-align: center; }
+  .shots img { display: block; width: 200px; height: auto; border-radius: 22px; border: 6px solid #fff; box-shadow: 0 6px 0 #9FD0EE; background: #fff; }
+  .shots figcaption { font-size: .85rem; color: var(--muted); margin-top: 8px; line-height: 1.35; }
+  .shots figcaption span { display: block; direction: rtl; font-size: .95rem; color: var(--ink); }
+  .hint { color: var(--muted); font-size: .85rem; margin: 0; }
 </style>
 </head>
 <body>
@@ -31,7 +38,45 @@
     <p class="fa" lang="fa" dir="rtl">اپی شاد برای کودکان که با نوشتنِ حرف‌ها، بازی با واژه‌ها، داستان‌های کوتاه و برچسب‌های رنگارنگ، شناختن، گفتن، خواندن و نوشتنِ الفبای فارسی را یادشان می‌دهد.</p>
   </section>
 
-  <div class="links">
+  <section aria-label="Screenshots">
+  <div class="shots">
+    <figure>
+      <img src="screenshots/1-trace.jpg" alt="Tracing a letter with a finger" width="540" height="864" loading="lazy">
+      <figcaption><span lang="fa">نوشتنِ حرف با انگشت</span>Tracing a letter with a finger</figcaption>
+    </figure>
+    <figure>
+      <img src="screenshots/2-home.jpg" alt="Step-by-step path through the alphabet" width="540" height="864" loading="lazy">
+      <figcaption><span lang="fa">مسیرِ قدم‌به‌قدمِ الفبا</span>Step-by-step path through the alphabet</figcaption>
+    </figure>
+    <figure>
+      <img src="screenshots/3-flashcard.jpg" alt="Each letter with a picture word" width="540" height="864" loading="lazy">
+      <figcaption><span lang="fa">هر حرف با کلمه و تصویر</span>Each letter with a picture word</figcaption>
+    </figure>
+    <figure>
+      <img src="screenshots/4-bubbles.jpg" alt="Pop the words with the letter" width="540" height="864" loading="lazy">
+      <figcaption><span lang="fa">ترکاندنِ حباب‌ها</span>Pop the words with the letter</figcaption>
+    </figure>
+    <figure>
+      <img src="screenshots/5-build-word.jpg" alt="Build a word, letter by letter" width="540" height="864" loading="lazy">
+      <figcaption><span lang="fa">ساختنِ کلمه، حرف به حرف</span>Build a word, letter by letter</figcaption>
+    </figure>
+    <figure>
+      <img src="screenshots/6-story.jpg" alt="Read a short story" width="540" height="864" loading="lazy">
+      <figcaption><span lang="fa">خواندنِ داستانِ کوتاه</span>Read a short story</figcaption>
+    </figure>
+    <figure>
+      <img src="screenshots/7-listen.jpg" alt="Listen and choose" width="540" height="864" loading="lazy">
+      <figcaption><span lang="fa">گوش بده و انتخاب کن</span>Listen and choose</figcaption>
+    </figure>
+    <figure>
+      <img src="screenshots/8-stickers.jpg" alt="Stickers to collect" width="540" height="864" loading="lazy">
+      <figcaption><span lang="fa">برچسب‌های رنگارنگ</span>Stickers to collect</figcaption>
+    </figure>
+  </div>
+  <p class="hint">← swipe to see more · برای دیدنِ بیشتر بکشید →</p>
+  </section>
+
+  <div class="links" style="margin-top: 24px;">
     <a class="btn green" href="support.html">Support · پشتیبانی</a>
     <a class="btn" href="privacy-policy.html">Privacy Policy · حریمِ خصوصی</a>
   </div>
