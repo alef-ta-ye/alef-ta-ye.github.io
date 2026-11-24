@@ -19,13 +19,13 @@
   .btn { background: #FFD23F; color: var(--ink); font-weight: 700; padding: 10px 22px; border-radius: 18px; text-decoration: none; box-shadow: 0 4px 0 #D49A00; }
   .btn.green { background: #3DDC84; color: #fff; box-shadow: 0 4px 0 #24A862; }
   footer { color: var(--muted); font-size: .9rem; margin-top: 28px; }
-  /* Screenshot gallery: swipe sideways on phones, scroll on desktop */
-  .shots { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 4px 18px; margin: 8px -18px 0; padding-left: 18px; padding-right: 18px; -webkit-overflow-scrolling: touch; }
-  .shots figure { flex: 0 0 212px; width: 212px; margin: 0; scroll-snap-align: center; }
-  .shots img { display: block; width: 200px; height: auto; border-radius: 22px; border: 6px solid #fff; box-shadow: 0 6px 0 #9FD0EE; background: #fff; }
+  /* Screenshot gallery: 2 per row on phones, 3 per row on wider screens */
+  .shots { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px 18px; margin: 8px 0 0; }
+  .shots figure { flex: 0 0 calc((100% - 18px) / 2); max-width: 220px; margin: 0; }
+  @media (min-width: 600px) { .shots figure { flex-basis: calc((100% - 36px) / 3); } }
+  .shots img { display: block; width: 100%; height: auto; border-radius: 22px; border: 6px solid #fff; box-shadow: 0 6px 0 #9FD0EE; background: #fff; }
   .shots figcaption { font-size: .85rem; color: var(--muted); margin-top: 8px; line-height: 1.35; }
   .shots figcaption span { display: block; direction: rtl; font-size: .95rem; color: var(--ink); }
-  .hint { color: var(--muted); font-size: .85rem; margin: 0; }
 </style>
 </head>
 <body>
@@ -73,10 +73,9 @@
       <figcaption><span lang="fa">برچسب‌های رنگارنگ</span>Stickers to collect</figcaption>
     </figure>
   </div>
-  <p class="hint">← swipe to see more · برای دیدنِ بیشتر بکشید →</p>
   </section>
 
-  <div class="links" style="margin-top: 24px;">
+  <div class="links" style="margin-top: 32px;">
     <a class="btn green" href="support.html">Support · پشتیبانی</a>
     <a class="btn" href="privacy-policy.html">Privacy Policy · حریمِ خصوصی</a>
   </div>
